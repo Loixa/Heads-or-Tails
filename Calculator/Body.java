@@ -356,16 +356,7 @@ public class Body extends JPanel implements ActionListener {
         spot = a;
         return num;
     }
-    public void Again(){
-        pastE.add(pastV);
-        String equations = "";
-        for (int i = 0; i < pastE.size(); i++) {
-            equations+=pastE.get(i);
-        }
-       text.setText(equations);
-        System.out.println("heeeee");
-        
-    }
+
     public void Equal() {
         String value1 = "";
         String operator = "";
@@ -510,8 +501,7 @@ public class Body extends JPanel implements ActionListener {
                     
                     break;
 
-            }       total+="\n";
-                    list.add(total);
+            }      
             //print whole equation and answer to the text field
             total = "";
             System.out.println(equation.size());
@@ -519,10 +509,10 @@ public class Body extends JPanel implements ActionListener {
                 total += equation.get(i);
             }
             //display the final equation with answer.
-            total+="\n";
-            text.setText(total);
+            
+            Clear(total);
             pastV=total;
-            Again();
+           
         }
 
     }
